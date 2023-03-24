@@ -63,12 +63,10 @@ export default {
       `
     },
     {
-      name: 'employees',
+      name: 'employee',
       type: 'array',
       title: 'Employees',
-      of: [{ type: 'email', name:'email', title: 'Email', },
-      { type: 'number', name:'employeeId', title: 'Employee Id' },
-      { type: 'number', name:'timelyUserId', title: 'Timely User Id' }]
+      of: [{type: 'employee'}],
     },
   ],
 };
