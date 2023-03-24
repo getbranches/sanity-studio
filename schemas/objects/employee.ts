@@ -11,17 +11,17 @@ export default defineType({
       title: 'Email',
       description: `
         The email address of the employee.
-      `
+      `,
     },
-    { 
-      name:'employeeId', 
+    {
+      name: 'employeeId',
       type: 'number',
-      title: 'Employee Id'
+      title: 'Employee Id',
     },
-    { 
-      name:'timelyUserId',
+    {
+      name: 'timelyUserId',
       type: 'number',
-      title: 'Timely User Id' 
-    }
-  ]
+      title: 'Timely User Id',
+    },
+  ],
 });

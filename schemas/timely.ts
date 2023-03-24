@@ -4,14 +4,14 @@ export default {
   title: 'Timely',
   preview: {
     select: {
-      docName: 'title', 
+      docName: 'title',
     },
-    prepare(selection: {docName: string}): {title:string} {
+    prepare(selection: { docName: string }): { title: string } {
       const { docName } = selection;
       return {
         title: `${docName}`,
       };
-     }
+    },
   },
   fields: [
     {
@@ -20,7 +20,7 @@ export default {
       title: 'Title',
       description: `
         The title of the document.
-      `
+      `,
     },
     {
       name: 'timelyAccountId',
@@ -28,7 +28,7 @@ export default {
       title: 'Timely Account ID',
       description: `
         The account ID of the Timely account.
-      `
+      `,
     },
     {
       name: 'timelyToken',
@@ -36,7 +36,7 @@ export default {
       title: 'Timely Token',
       description: `
         The API token of the Timely account.
-      `
+      `,
     },
     {
       name: 'timelyDefaultClient',
@@ -44,7 +44,7 @@ export default {
       title: 'Timely Default Client',
       description: `
         The default client to use when creating new Timely projects.
-      `
+      `,
     },
     {
       name: 'tripletexActivityCode',
@@ -52,7 +52,7 @@ export default {
       title: 'Tripletex Activity Code',
       description: `
         The activity code to use when creating new Tripletex time entries.
-      `
+      `,
     },
     {
       name: 'employeeToken',
@@ -60,13 +60,13 @@ export default {
       title: 'Employee Token',
       description: `
         The employee token to use when creating new Tripletex time entries.
-      `
+      `,
     },
     {
       name: 'employee',
       type: 'array',
       title: 'Employees',
-      of: [{type: 'employeeForTimelyIntegration'}],
+      of: [{ type: 'employeeForTimelyIntegration' }],
     },
   ],
 };
