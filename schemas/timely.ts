@@ -66,7 +66,7 @@ export default {
       name: 'employee',
       type: 'array',
       title: 'Employees',
-      of: [{type: 'employee'}],
+      of: [{type: 'employeeForTimelyIntegration'}],
     },
   ],
 };

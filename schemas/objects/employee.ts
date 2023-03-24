@@ -1,7 +1,7 @@
 import { defineType } from 'sanity';
 
 export default defineType({
-  name: 'employee',
+  name: 'employeeForTimelyIntegration',
   type: 'object',
   title: 'Employee',
   fields: [
