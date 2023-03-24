@@ -4,32 +4,24 @@ export default {
   title: 'Timely',
   preview: {
     select: {
-      timelyAccountId: 'timelyAccountId',
-      timelyToken: 'timelyToken',
-      timelyDefaultClient: 'timelyDefaultClient',
-      tripletexActivityCode: 'tripletexActivityCode',
-      employeeToken: 'employeeToken',
+      docName: 'title', 
     },
-    prepare(selection: {
-      timelyAccountId: string;
-      timelyToken: string;
-      timelyDefaultClient: number;
-      tripletexActivityCode: number;
-      employeeToken: string;
-    }): { title: string } {
-      const {
-        timelyAccountId,
-        timelyToken,
-        timelyDefaultClient,
-        tripletexActivityCode,
-        employeeToken,
-      } = selection;
+    prepare(selection: {docName: string}): {title:string} {
+      const { docName } = selection;
       return {
-        title: `${timelyAccountId} → ${timelyToken} → ${timelyDefaultClient} → ${tripletexActivityCode} → ${employeeToken}`,
+        title: `${docName}`,
       };
-    },
+     }
   },
   fields: [
+    {
+      name: 'title',
+      type: 'string',
+      title: 'Title',
+      description: `
+        The title of the document.
+      `
+    },
     {
       name: 'timelyAccountId',
       type: 'string',
@@ -74,7 +66,9 @@ export default {
       name: 'employees',
       type: 'array',
       title: 'Employees',
-      of: [{ type: 'string', title: 'email' }],
+      of: [{ type: 'email', name:'employeeEmail', title: 'Email', },
+      { type: 'number', name:'employeeId', title: 'Employee Id' },
+      { type: 'number', name:'timelyUserId', title: 'Timely User Id' }]
     },
   ],
 };
