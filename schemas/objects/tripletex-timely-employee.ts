@@ -7,10 +7,12 @@ export const tripletexTimelyEmployee = defineType({
   preview: {
     select: {
       email: 'email',
+      status: 'status',
     },
-    prepare({ email }) {
+    prepare({ email, status }) {
       return {
         title: email,
+        subtitle: status,
       };
     },
   },
