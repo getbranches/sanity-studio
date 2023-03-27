@@ -1,4 +1,6 @@
-export default {
+import { defineType } from 'sanity';
+
+export default defineType({
   name: 'timely',
   type: 'document',
   title: 'Timely',
@@ -69,4 +71,4 @@ export default {
       of: [{ type: 'employeeForTimelyIntegration' }],
     },
   ],
-};
+});
