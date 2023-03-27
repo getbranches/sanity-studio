@@ -1,74 +1,84 @@
+import { BiWindowOpen } from 'react-icons/bi';
 import { defineType } from 'sanity';
 
-export default defineType({
-  name: 'timely',
+export const timelyCustomer = defineType({
+  name: 'timely-customer',
   type: 'document',
-  title: 'Timely',
+  title: 'Timely Customer',
+  icon: BiWindowOpen,
   preview: {
     select: {
-      docName: 'title',
+      customerName: 'customerName',
     },
-    prepare(selection: { docName: string }): { title: string } {
-      const { docName } = selection;
+    prepare(selection: { customerName: string }): { title: string } {
+      const { customerName } = selection;
       return {
-        title: `${docName}`,
+        title: customerName,
       };
     },
   },
+  groups: [
+    { name: 'timely', title: 'Timely' },
+    { name: 'tripletex', title: 'Tripletex' },
+  ],
   fields: [
     {
-      name: 'title',
+      name: 'customerName',
       type: 'string',
-      title: 'Title',
-      description: `
-        The title of the document.
-      `,
+      validation: Rule => Rule.required(),
     },
     {
+      group: 'timely',
       name: 'timelyAccountId',
-      type: 'string',
+      type: 'number',
       title: 'Timely Account ID',
-      description: `
-        The account ID of the Timely account.
-      `,
+      validation: Rule => Rule.required(),
     },
     {
+      group: 'timely',
       name: 'timelyToken',
       type: 'string',
       title: 'Timely Token',
       description: `
         The API token of the Timely account.
       `,
+      validation: Rule => Rule.required(),
     },
     {
+      group: 'timely',
       name: 'timelyDefaultClient',
       type: 'number',
       title: 'Timely Default Client',
       description: `
         The default client to use when creating new Timely projects.
       `,
+      validation: Rule => Rule.required(),
     },
     {
+      group: 'tripletex',
       name: 'tripletexActivityCode',
       type: 'number',
       title: 'Tripletex Activity Code',
       description: `
         The activity code to use when creating new Tripletex time entries.
       `,
+      validation: Rule => Rule.required(),
     },
     {
+      group: 'tripletex',
       name: 'employeeToken',
       type: 'string',
       title: 'Employee Token',
       description: `
         The employee token to use when creating new Tripletex time entries.
       `,
+      validation: Rule => Rule.required(),
     },
     {
       name: 'employee',
       type: 'array',
       title: 'Employees',
-      of: [{ type: 'employeeForTimelyIntegration' }],
+      of: [{ type: 'tripletex-timely-employee' }],
     },
   ],
 });

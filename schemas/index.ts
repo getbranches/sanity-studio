@@ -1,5 +1,9 @@
-import employee from './objects/employee';
-import timely from './timely';
-import tripletexTime from './tripletex-time';
+import { tripletexTimelyEmployee } from './objects/tripletex-timely-employee';
+import { timelyCustomer } from './timely-customer';
+import { tripletexTimeCustomer } from './tripletex-time';
 
-export const schemaTypes = [employee, tripletexTime, timely];
+export const schemaTypes = [
+  tripletexTimelyEmployee,
+  timelyCustomer,
+  tripletexTimeCustomer,
+];

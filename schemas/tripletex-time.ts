@@ -1,9 +1,11 @@
+import { BiTimeFive } from 'react-icons/bi';
 import { defineType } from 'sanity';
 
-export default defineType({
+export const tripletexTimeCustomer = defineType({
   name: 'tripletex-time-customers',
   type: 'document',
   title: 'Tripletex Time Customers',
+  icon: BiTimeFive,
   preview: {
     select: {
       consumerCompanyName: 'consumerCompany.name',
