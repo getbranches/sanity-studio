@@ -4,6 +4,16 @@ export const tripletexTimelyEmployee = defineType({
   name: 'tripletex-timely-employee',
   type: 'object',
   title: 'Employee',
+  preview: {
+    select: {
+      email: 'email',
+    },
+    prepare({ email }) {
+      return {
+        title: email,
+      };
+    },
+  },
   fields: [
     {
       name: 'email',
@@ -26,5 +36,19 @@ export const tripletexTimelyEmployee = defineType({
       title: 'Timely User Id',
       validation: Rule => Rule.required(),
     },
+    {
+      name: 'status',
+      type: 'string',
+      validation: Rule => Rule.required(),
+      options: {
+        list: [
+          { title: 'Active', value: 'active' },
+          { title: 'Inactive', value: 'inactive' },
+        ],
+      },
+    },
   ],
+  initialValue: {
+    status: 'active',
+  },
 });

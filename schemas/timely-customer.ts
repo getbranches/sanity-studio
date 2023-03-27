@@ -6,24 +6,13 @@ export const timelyCustomer = defineType({
   type: 'document',
   title: 'Timely Customer',
   icon: BiWindowOpen,
-  preview: {
-    select: {
-      customerName: 'customerName',
-    },
-    prepare(selection: { customerName: string }): { title: string } {
-      const { customerName } = selection;
-      return {
-        title: customerName,
-      };
-    },
-  },
   groups: [
     { name: 'timely', title: 'Timely' },
     { name: 'tripletex', title: 'Tripletex' },
   ],
   fields: [
     {
-      name: 'customerName',
+      name: 'name',
       type: 'string',
       validation: Rule => Rule.required(),
     },
