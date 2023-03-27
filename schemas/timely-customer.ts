@@ -64,7 +64,7 @@ export const timelyCustomer = defineType({
       validation: Rule => Rule.required(),
     },
     {
-      name: 'employee',
+      name: 'employees',
       type: 'array',
       title: 'Employees',
       of: [{ type: 'tripletex-timely-employee' }],
