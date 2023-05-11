@@ -18,27 +18,29 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^3.0.0",
+    "@sanity/vision": "^3.10.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-is": "^18.2.0",
-    "sanity": "^3.0.0",
+    "sanity": "^3.10.1",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
-    "@bjerk/eslint-config": "^3.0.1",
+    "@bjerk/eslint-config": "^4.1.0",
     "@cobraz/prettier": "^2.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
     "@sanity/eslint-config-studio": "^2.0.1",
-    "eslint": "^8.6.0",
-    "eslint-config-prettier": "8.6.0",
-    "eslint-plugin-eslint-comments": "3.2.0",
-    "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-promise": "6.1.1",
-    "eslint-plugin-unicorn": "44.0.2",
-    "prettier": "^2.8.3",
-    "typescript": "^4.0.0"
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unicorn": "^47.0.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
   },
   "prettier": "@cobraz/prettier"
 }
