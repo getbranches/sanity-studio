@@ -24,25 +24,27 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
+      - uses: pnpm/action-setup@v2
+
       - name: Use Node LTS ✨
         uses: actions/setup-node@v3
         with:
           node-version: lts/*
-          cache: yarn
+          cache: pnpm
 
       - name: Install dependencies 📦️
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Lint 💅
-        run: yarn lint
+        run: pnpm lint
 
       - name: Build 🔨
-        run: yarn build
+        run: pnpm build
 
       - name: Upload GitHub Pages assets 📦️
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: ./dist
+          path: ./build
 
   deploy:
     name: Deployment
