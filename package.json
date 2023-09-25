@@ -24,7 +24,7 @@
     "react-icons": "^4.8.0",
     "react-is": "^18.2.0",
     "sanity": "^3.10.1",
-    "styled-components": "^5.2.0"
+    "styled-components": "^6.0.0"
   },
   "devDependencies": {
     "@simenandre/prettier": "^5.0.0",
