@@ -64,6 +64,15 @@ export const timelyCustomer = defineType({
       validation: Rule => Rule.required(),
     },
     {
+      group: 'tripletex',
+      name: 'consumerToken',
+      type: 'string',
+      title: 'Consumer Token',
+      description: `
+        The token used to communicate with the tenant's Tripletex API.
+      `,
+    },
+    {
       name: 'employees',
       type: 'array',
       title: 'Employees',
