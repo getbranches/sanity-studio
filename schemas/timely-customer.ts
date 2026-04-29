@@ -25,6 +25,35 @@ export const timelyCustomer = defineType({
     },
     {
       group: 'timely',
+      name: 'timelyAuthClientId',
+      type: 'string',
+      title: 'Timely Auth Client ID',
+      description: `
+        The Auth Client ID of the Timely account.
+      `,
+      validation: Rule => Rule.required(),
+    },
+    {
+      group: 'timely',
+      name: 'timelyAuthClientSecret',
+      type: 'string',
+      title: 'Timely Auth Client Secret',
+      description: `
+        The Auth Client Secret of the Timely account.
+      `,
+      validation: Rule => Rule.required(),
+    },
+    {
+      group: 'timely',
+      name: 'timelyAuthClientRedirectUri',
+      type: 'string',
+      title: 'Timely Auth Client Redirect URI',
+      description: `
+        The Auth Client Redirect URI of the Timely account. If not set, it is assumed to be 'urn:ietf:wg:oauth:2.0:oob'.
+      `,
+    },
+    {
+      group: 'timely',
       name: 'timelyToken',
       type: 'string',
       title: 'Timely Token',
