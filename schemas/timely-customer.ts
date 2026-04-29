@@ -35,6 +35,16 @@ export const timelyCustomer = defineType({
     },
     {
       group: 'timely',
+      name: 'timelyRefreshToken',
+      type: 'string',
+      title: 'Timely Refresh Token',
+      description: `
+        The refresh token of the Timely API token.
+      `,
+      validation: Rule => Rule.required(),
+    },
+    {
+      group: 'timely',
       name: 'timelyDefaultClient',
       type: 'number',
       title: 'Timely Default Client',
