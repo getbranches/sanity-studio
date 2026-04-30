@@ -27,7 +27,7 @@ jobs:
       - uses: pnpm/action-setup@v2
 
       - name: Use Node LTS ✨
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
           cache: pnpm
@@ -42,7 +42,7 @@ jobs:
         run: pnpm build
 
       - name: Upload GitHub Pages assets 📦️
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./build
 
@@ -56,4 +56,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages 🚀
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
